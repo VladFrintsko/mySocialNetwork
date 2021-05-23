@@ -1,0 +1,49 @@
+.btn{
+  padding: 0 2px;
+  margin-left: 10px;
+}
+.postHead{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postHead img{
+  border-radius: 50%;
+  width: 30px;
+}
+.postsName{
+  margin-left: 10px;
+  font-weight: 700;
+}
+.postsInfo{
+  margin-left: 40px;
+  overflow-wrap:break-word;
+}  
+
+.postItem {
+  margin-left: 20px;
+  padding:5px;
+  margin-bottom: 20px;
+  width: 60%;
+}
+.userResponses{
+  margin-left: 40px;
+}
+.like{
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .4s;
+}
+.like:hover{
+  text-shadow: 0 0 5px red;
+}
+.countLikes{
+  margin-left: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  padding:3px;
+}
+
+

@@ -1,0 +1,38 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  padding: 20px 50px;
+}
+
+.dialogItems {
+  border-right: 2px solid black;
+  margin-right: 20px;
+}
+
+.messages_wrapper {
+  width: 610px;
+  position: relative;
+}
+.messages {
+  margin-bottom: 20px;
+  height: 100%;
+  
+}
+.messageText {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  resize: none;
+}
+.formSend {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  height: 90px;
+}
+.formSend .btn {
+  right: 0;
+  position: absolute;
+  bottom: 0;
+}

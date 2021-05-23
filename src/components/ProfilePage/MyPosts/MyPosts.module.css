@@ -1,0 +1,15 @@
+textarea[name='addNewPost']{
+    width: 500px;
+    height: 50px;
+    height: 100px;
+    overflow-y: scroll;
+    resize: none;
+  }
+  .sendPost_wrapper{
+    padding-left: 40px;
+    margin-bottom: 30px;
+  }
+  .btn{
+    padding: 0 2px;
+    margin-left: 10px;
+  }

@@ -1,0 +1,48 @@
+.aside {
+  background: rgb(26, 24, 31);
+  border-radius: 0 20px 0 0;
+}
+.nav_link {
+  text-decoration: none;
+  color: white;
+}
+.navItem {
+  list-style-type: none;
+  transition-property: color;
+  transition-duration: .4s;
+  padding: 5px 0 5px 20px ;
+  cursor: pointer;
+}
+.active{
+  color:white;
+  font-weight: 900;
+}
+.navItem:hover {
+  background: rgb(227, 230, 219);
+  color: black
+}
+
+#firstItem:hover{
+  background: rgb(227, 230, 219);
+  border-radius:0 20px 0 0;
+}
+.friends{
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.friends_wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+@media screen and (max-width: 1450px) {
+  .friends_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}

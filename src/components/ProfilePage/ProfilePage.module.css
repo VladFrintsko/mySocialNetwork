@@ -1,0 +1,8 @@
+.topLine {
+  height: 50px;
+  background: rgb(26, 24, 31);
+  border-radius: 20px 0 0 0;
+}
+.pageWrapper{
+  position: relative;
+}

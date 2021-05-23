@@ -1,0 +1,17 @@
+header {
+  grid-area: header;
+  background: rgb(26, 24, 31);
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+ width: 140px;
+}
+.logo img {
+  width: 100%;
+  transition: 0.3s;
+}
+.logo img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

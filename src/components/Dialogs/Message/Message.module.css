@@ -1,0 +1,15 @@
+.message {
+    background: grey;
+    word-wrap:break-word;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-radius: 10px 10px 10px 0;
+    margin-left: 300px;
+    transition: .4s;
+    color:white;
+  }
+  .message:hover{
+    cursor: pointer;
+    background: #666;
+  }
