@@ -11,7 +11,6 @@ import { Route } from "react-router-dom";
 
 const App = (props) => {
   return (
-    
       <div className="app-wrapper">
         <Header />
         <Navbar friends={props.state.users.friends} />
@@ -24,7 +23,6 @@ const App = (props) => {
           <Route path='/settings' component={Settings} />
         </div>
       </div>
-    
   );
 };
 
