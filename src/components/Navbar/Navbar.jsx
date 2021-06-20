@@ -17,7 +17,15 @@ const Navbar = (props) => {
             activeClassName={navStyles.active}
             id={navStyles.firstItem}
           >
-            Profile
+            <div style={{ display: "flex" }}>
+              <div style={{ width: "20px" }}>
+                <img
+                  style={{ width: "100%" }}
+                  src={props.icons.icons.profile}
+                />
+              </div>
+              <div style={{ marginLeft: "10px" }}>Profile</div>
+            </div>
           </div>
         </NavLink>
         <NavLink
@@ -25,28 +33,62 @@ const Navbar = (props) => {
           className={navStyles.nav_link}
           activeClassName={navStyles.active}
         >
-          <div className={navStyles.navItem}>Messages</div>
+          <div className={navStyles.navItem}>
+            <div style={{ display: "flex" }}>
+              <div style={{ width: "20px" }}>
+                <img
+                  style={{ width: "100%" }}
+                  src={props.icons.icons.message}
+                />
+              </div>
+              <div style={{ marginLeft: "10px" }}>Messages</div>
+            </div>
+          </div>
         </NavLink>
         <NavLink
           to="/news"
           className={navStyles.nav_link}
           activeClassName={navStyles.active}
         >
-          <div className={navStyles.navItem}>News</div>
+          <div className={navStyles.navItem}>
+            <div style={{ display: "flex" }}>
+              <div style={{ width: "20px" }}>
+                <img style={{ width: "100%" }} src={props.icons.icons.news} />
+              </div>
+              <div style={{ marginLeft: "10px" }}>News</div>
+            </div>
+          </div>
         </NavLink>
         <NavLink
           to="/music"
           className={navStyles.nav_link}
           activeClassName={navStyles.active}
         >
-          <div className={navStyles.navItem}>Music</div>
+          <div className={navStyles.navItem}>
+            <div style={{ display: "flex" }}>
+              <div style={{ width: "20px" }}>
+                <img style={{ width: "100%" }} src={props.icons.icons.music} />
+              </div>
+              <div style={{ marginLeft: "10px" }}>Music</div>
+            </div>
+          </div>
         </NavLink>
         <NavLink
           to="/settings"
           className={navStyles.nav_link}
           activeClassName={navStyles.active}
         >
-          <div className={navStyles.navItem}>Settings</div>
+          <div className={navStyles.navItem}>
+            <div style={{ display: "flex" }}>
+              <div style={{ width: "20px" }}>
+                <img
+                  style={{ width: "100%" }}
+                  src={props.icons.icons.setting}
+                />
+              </div>
+              <div style={{ marginLeft: "10px" }}>Settings</div>
+            </div>
+          </div>
         </NavLink>
       </nav>
       <div className={navStyles.friends}>FRIENDS</div>

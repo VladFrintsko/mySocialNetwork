@@ -1,0 +1,17 @@
+.wrapper {
+    display: grid;
+  
+    grid-template-areas:
+      "header header"
+      "aside c";
+  
+    grid-template-rows: minmax(60px, 100px) 1fr;
+    grid-template-columns: minmax(200px, 2fr) 10fr;
+    grid-gap: 20px;
+  }
+  
+  .wrapperContent {
+    grid-area: c;
+    background: rgb(227, 230, 219);
+    border-radius: 20px 0 0 0;
+  }

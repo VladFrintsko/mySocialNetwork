@@ -1,6 +1,6 @@
 .aside {
   background: rgb(26, 24, 31);
-  border-radius: 0 20px 0 0;
+  border-radius: 0 5px 0 0;
 }
 .nav_link {
   text-decoration: none;
@@ -24,7 +24,7 @@
 
 #firstItem:hover{
   background: rgb(227, 230, 219);
-  border-radius:0 20px 0 0;
+  border-radius:0 5px 0 0;
 }
 .friends{
   color: white;

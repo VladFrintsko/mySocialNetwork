@@ -6,7 +6,7 @@ import userStyles from './UserInfo.module.css';
         <div className={userStyles.mainInfoWrapper}>
           <div className={userStyles.userPhoto}>
             <img
-              src="https://eyeandfaceclinic.ie/wp-content/uploads/2018/01/beautiful-face-clear-skin.jpg"
+              src={props.myInfo.myPhoto}
               alt="myPhoto"
             />
           </div>

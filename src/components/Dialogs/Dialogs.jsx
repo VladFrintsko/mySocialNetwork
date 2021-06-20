@@ -11,7 +11,7 @@ const Dialogs = (props) => {
   let addMessage = () => {
     let text = textElem.current.value;
 
-    if (text && text.trim() !== '') {
+    if (text.trim() !== '') {
       props.addMessage(text);
       props.rerender();
     } 
