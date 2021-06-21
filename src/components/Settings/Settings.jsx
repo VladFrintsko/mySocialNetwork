@@ -8,7 +8,6 @@ const Settings = (props) => {
     props.flag(false);
     localStorage.removeItem('userData');
   }
-  console.log(props);
   return (
     <div>
       <h1>Settings</h1>
