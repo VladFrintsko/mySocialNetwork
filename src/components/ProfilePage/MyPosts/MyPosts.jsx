@@ -20,7 +20,7 @@ const MyPosts = (props) => {
         <div className={myPostsStyles.sendPost_wrapper}>
           <label>Add post</label>
           <br />
-          <div class="form-floating">
+          <div className="form-floating">
             <textarea
               placeholder="write new post..."
               ref={postText}
