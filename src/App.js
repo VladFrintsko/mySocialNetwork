@@ -13,8 +13,14 @@ const App = (props) => {
     "Пароль не может быть пустым"
   );
   const [formValid, setFormValid] = useState(false);
+  const [flag, setFlag] = useState();
 
   useEffect(() => {
+    if (localStorage.getItem("userData") !== null) {
+      setFlag(true);
+    } else {
+      setFlag(false);
+    }
     if (loginError || passwordError) {
       setFormValid(false);
     } else {
@@ -59,42 +65,18 @@ const App = (props) => {
     const regUsers = props.state.users.registredUsers;
     regUsers.forEach((user) => {
       if (login === user.login && password === user.password) {
-        return true;
-      } else {
-        return false;
+        const saveRegData = {
+          login,
+          password,
+        };
+        localStorage.setItem("userData", JSON.stringify(saveRegData));
+        setFlag(true);
       }
     });
   };
-  return (
-    <div className="app-wrapper">
-      <div className="enter-field">
-        <h1>Вход</h1>
-        {loginDirty && loginError && (
-          <div style={{ color: "red" }}>{loginError}</div>
-        )}
-        <input
-          onChange={(e) => loginHandler(e)}
-          value={login}
-          onBlur={(e) => blurHandler(e)}
-          name="login"
-          type="text"
-          placeholder="Enter your login..."
-        />
-        {passwordDirty && passwordError && (
-          <div style={{ color: "red" }}>{passwordError}</div>
-        )}
-        <input
-          onChange={(e) => passwordHandler(e)}
-          value={password}
-          onBlur={(e) => blurHandler(e)}
-          name="password"
-          type="password"
-          placeholder="Enter your password..."
-        />
-        <button disabled={!formValid} onClick={enter}>
-          Войти
-        </button>
-      </div>
+
+  if (flag) {
+    return (
       <div>
         <BrowserRouter>
           <MainPage
@@ -104,11 +86,53 @@ const App = (props) => {
             addPost={props.addPost}
             addMessage={props.addMessage}
             rerender={props.rerender}
+            flag={setFlag}
           />
         </BrowserRouter>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="reg-wrapper">
+        <div className="signIn-wrapper">
+          <h1>Вход</h1>
+          <div className="enter-field">
+            <div className="login-field">
+              {loginDirty && loginError && (
+                <div style={{ color: "red" }}>{loginError}</div>
+              )}
+              <input
+                onChange={(e) => loginHandler(e)}
+                value={login}
+                onBlur={(e) => blurHandler(e)}
+                name="login"
+                type="text"
+                placeholder="Login"
+              />
+            </div>
+            <div className="password-field">
+              {passwordDirty && passwordError && (
+                <div style={{ color: "red" }}>{passwordError}</div>
+              )}
+              <input
+                onChange={(e) => passwordHandler(e)}
+                value={password}
+                onBlur={(e) => blurHandler(e)}
+                name="password"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <div className="button-field">
+              <button className="button" disabled={!formValid} onClick={enter}>
+                Войти
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default App;

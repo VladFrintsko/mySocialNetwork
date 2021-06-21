@@ -1,6 +1,7 @@
 .aside {
   background: rgb(26, 24, 31);
   border-radius: 0 5px 0 0;
+  box-shadow: 2px 2px 20px black;
 }
 .nav_link {
   text-decoration: none;
@@ -12,6 +13,7 @@
   transition-duration: .4s;
   padding: 5px 0 5px 20px ;
   cursor: pointer;
+  
 }
 .active{
   color:white;
@@ -45,4 +47,11 @@
     grid-template-columns: 1fr 1fr;
     width: 100%;
   }
+}
+
+.icon{
+  filter:invert(1);
+}
+.navItem:hover .icon{
+  filter: invert(0);
 }

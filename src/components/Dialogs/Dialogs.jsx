@@ -34,7 +34,7 @@ const Dialogs = (props) => {
       <div className={dialogStyles.messages_wrapper}>
         <div className={dialogStyles.messages}>
           {props.dialogs.messages.map((message) => {
-            return <Message text={message}/>;
+            return <Message message={message} />;
           })}
           <div className={dialogStyles.formSend}>
             <textarea

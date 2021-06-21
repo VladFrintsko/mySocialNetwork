@@ -5,13 +5,10 @@ import UserInfo from './UserInfo/UserInfo';
 import MyPosts from "./MyPosts/MyPosts";
 
 const ProfilePage = (props) => {
-  console.log(props.state.profilePage);
   return (
     <div className={profilePageStyles.pageWrapper}>
-      <div className={profilePageStyles.topLine}>
-      </div>
-      <UserInfo myInfo={props.state.myInfo} />
-      <MyPosts rerender={props.rerender} removePost={props.removePost} addLike={props.addLike} state={props.state.profilePage} addPost={props.addPost} />
+      <UserInfo myInfo={props.state} addPost={props.addPost} />
+      <MyPosts rerender={props.rerender} removePost={props.removePost} addLike={props.addLike} state={props.state} addPost={props.addPost} />
     </div>
   );
 };

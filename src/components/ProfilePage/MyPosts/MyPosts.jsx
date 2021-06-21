@@ -16,34 +16,47 @@ const MyPosts = (props) => {
 
   return (
     <div>
-      <div className={myPostsStyles.sendPost_wrapper}>
-        <label>My posts</label>
-        <br />
-        <textarea
-          placeholder="write new post..."
-          ref={postText}
-          name="addNewPost"
-          id="sendText"
-        ></textarea>
-        <br />
-        <button
-          type="submit"
-          name="btn"
-          className="btn btn-dark"
-          onClick={addPost}
-        >
-          Add post
-        </button>
+      <div className={myPostsStyles.wrapper}>
+        <div className={myPostsStyles.sendPost_wrapper}>
+          <label>Add post</label>
+          <br />
+          <div class="form-floating">
+            <textarea
+              placeholder="write new post..."
+              ref={postText}
+              name="addNewPost"
+              id="sendText"
+              className="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style={{ height: "100px" }}
+            ></textarea>
+            <label for="floatingTextarea2">New Post</label>
+          </div>
+          <br />
+          <button
+            type="submit"
+            name="btn"
+            className="btn btn-dark"
+            onClick={addPost}
+          >
+            Add post
+          </button>
+        </div>
       </div>
 
       <div id="post">
-        {props.state.MyPosts.map((post) => {
+        {props.state.profilePage.MyPosts.length !== 0 && (
+          <div className={myPostsStyles.postsWrapperTitle}>MY POSTS</div>
+        )}
+        {props.state.profilePage.MyPosts.map((post) => {
           return (
             <Post
-            rerender={props.rerender}
+              rerender={props.rerender}
               removePost={props.removePost}
               addLike={props.addLike}
               postInfo={post}
+              regUsers={props.state.users.registredUsers}
             />
           );
         })}

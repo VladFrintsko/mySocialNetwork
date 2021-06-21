@@ -5,11 +5,13 @@ const Post = (props) => {
     props.removePost(props.postInfo.id);
     props.rerender();
   };
-
   let addLike = () => {
     props.addLike(1, props.postInfo.id);
     props.rerender();
   };
+
+  const trueUser = JSON.parse(localStorage.getItem('userData')).login;
+  const getUser = props.regUsers.find(user=> user.login === trueUser);
 
   return (
     <div>
@@ -17,10 +19,10 @@ const Post = (props) => {
         <div className={postStyles.postHead}>
           <div className={postStyles.avtorPlace}>
             <img
-              src="https://eyeandfaceclinic.ie/wp-content/uploads/2018/01/beautiful-face-clear-skin.jpg"
+              src={getUser.myPhoto}
               alt="myPhoto"
             />
-            <span className={postStyles.postsName}>Maria Norris</span>
+            <span className={postStyles.postsName}>{getUser.fullName}</span>
           </div>
 
           <button

@@ -14,7 +14,7 @@ import { Route } from "react-router-dom";
 const MainPage = (props) => {
   return (
     <div className={mainPageStyles.wrapper}>
-      <Header />
+      <Header state={props.state} />
       <Navbar friends={props.state.users.friends} icons={props.state.navigation} />
 
       <div className={mainPageStyles.wrapperContent}>
@@ -46,7 +46,7 @@ const MainPage = (props) => {
           path="/music"
           render={() => <Music music={props.state.music} />}
         />
-        <Route path="/settings" component={Settings} />
+        <Route path="/settings" render={() => <Settings flag={props.flag} rerender={props.rerender} />} />
       </div>
     </div>
   );

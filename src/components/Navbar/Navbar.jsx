@@ -19,7 +19,7 @@ const Navbar = (props) => {
           >
             <div style={{ display: "flex" }}>
               <div style={{ width: "20px" }}>
-                <img
+                <img className={navStyles.icon}
                   style={{ width: "100%" }}
                   src={props.icons.icons.profile}
                 />
@@ -36,7 +36,7 @@ const Navbar = (props) => {
           <div className={navStyles.navItem}>
             <div style={{ display: "flex" }}>
               <div style={{ width: "20px" }}>
-                <img
+                <img className={navStyles.icon}
                   style={{ width: "100%" }}
                   src={props.icons.icons.message}
                 />
@@ -53,7 +53,7 @@ const Navbar = (props) => {
           <div className={navStyles.navItem}>
             <div style={{ display: "flex" }}>
               <div style={{ width: "20px" }}>
-                <img style={{ width: "100%" }} src={props.icons.icons.news} />
+                <img  className={navStyles.icon} style={{ width: "100%" }} src={props.icons.icons.news} />
               </div>
               <div style={{ marginLeft: "10px" }}>News</div>
             </div>
@@ -67,7 +67,7 @@ const Navbar = (props) => {
           <div className={navStyles.navItem}>
             <div style={{ display: "flex" }}>
               <div style={{ width: "20px" }}>
-                <img style={{ width: "100%" }} src={props.icons.icons.music} />
+                <img className={navStyles.icon} style={{ width: "100%" }} src={props.icons.icons.music} />
               </div>
               <div style={{ marginLeft: "10px" }}>Music</div>
             </div>
@@ -81,7 +81,7 @@ const Navbar = (props) => {
           <div className={navStyles.navItem}>
             <div style={{ display: "flex" }}>
               <div style={{ width: "20px" }}>
-                <img
+                <img className={navStyles.icon}
                   style={{ width: "100%" }}
                   src={props.icons.icons.setting}
                 />

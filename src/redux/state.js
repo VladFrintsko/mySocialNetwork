@@ -1,11 +1,13 @@
 import Cage from "./user_avatars/Cage.jpg";
 import Johnson from "./user_avatars/Johnson.jpg";
 import Lawrence from "./user_avatars/Lawrence.jpg";
-import mrBeen from "./user_avatars/MrBeen.jpg";
+import mrBeen from "./user_avatars/mrBeen.jpg";
 import Shrek from "./user_avatars/Shrek.jpg";
 import Snow from "./user_avatars/Snow.jpg";
 import Thor from "./user_avatars/Thor.jpg";
 import MyAvatar from './user_avatars/my.jpg';
+import MyPhoto from './user_avatars/myPhoto.jpg';
+import BrusWein from './user_avatars/BrusWein.jpg';
 
 import ProfileIcon from './icons/profile.png';
 import MusicIcon from './icons/music.png';
@@ -16,10 +18,6 @@ import SettingIcon from './icons/settings.png';
 let id = 0;
 
 let state = {
-  myInfo:{
-    myName: 'Maria Noris',
-    myPhoto: MyAvatar,
-  },
   profilePage: {
     MyPosts: [],
   },
@@ -34,25 +32,36 @@ let state = {
   },
   music: {
     songs: [
-      { title: "Группа крови", singer: "Цой" },
-      { title: "Крошка моя", singer: "Руки вверх" },
-      { title: "In the end", singer: "Linkin Park" },
-      { title: "Believer", singer: "Imagine Dragons" },
-      { title: "Самая самая", singer: "Егор Крид" },
-      { title: "Она не твоя", singer: "МОТ" },
-      { title: "Музыка нас связала", singer: "Мираж" },
-      { title: "Новый Год", singer: "Дискотека Авария" },
-      { title: "It`s mt life", singer: "Bon Jovi" },
-      { title: "New Divide", singer: "Linkin Park" },
+      { title: "Группа крови", singer: "Цой", photo: MyAvatar},
+      { title: "Крошка моя", singer: "Руки вверх", photo: MyAvatar},
+      { title: "In the end", singer: "Linkin Park", photo: MyAvatar},
+      { title: "Believer", singer: "Imagine Dragons", photo: MyAvatar},
+      { title: "Самая самая", singer: "Егор Крид", photo: MyAvatar},
+      { title: "Она не твоя", singer: "МОТ", photo: MyAvatar},
+      { title: "Музыка нас связала", singer: "Мираж", photo: MyAvatar },
+      { title: "Новый Год", singer: "Дискотека Авария", photo: MyAvatar},
+      { title: "It`s mt life", singer: "Bon Jovi", photo: MyAvatar},
+      { title: "New Divide", singer: "Linkin Park", photo: MyAvatar},
     ],
   },
   users: {
     registredUsers:[
       {
-        userName: 'Cage',
-        login: 'Gage228',
-        fullName:'Nicolas Cage',
-        password: 'JohnyCage',
+        userName: 'Batman',
+        login: 'Wein228',
+        fullName:'Brus Wein',
+        password: 'Batman',
+        city: 'Gotem',
+        dateOfBirth: '11 january 1972',
+        myPhoto: BrusWein,
+      },
+      {
+        userName: 'Nick',
+        login: 'F123',
+        fullName:'Nick Davidson',
+        password: 'F123',
+        city: 'London',
+        dateOfBirth: '19 october 1984',
         myPhoto: MyAvatar,
       },
       {
@@ -60,7 +69,9 @@ let state = {
         login: 'Frintskov',
         fullName: 'Vladyslav Frintsko',
         password: 'F02062000',
-        myPhoto: MyAvatar,
+        city: 'Dnipro',
+        dateOfBirth: '2 june 2000',
+        myPhoto: MyPhoto,
       },
     ],
     friends: [
@@ -96,6 +107,7 @@ let state = {
   },
   dialogs: {
     messages: [],
+    answerMessages:[],
   },
 };
 
@@ -109,6 +121,8 @@ export let removePost = (id) => {
     (post) => post.id !== id
   );
 };
+
+// setInterval(() => state.dialogs.answerMessages.push('hi'), 10000);
 
 export let addPost = (text) => {
   state.profilePage.MyPosts.push({
