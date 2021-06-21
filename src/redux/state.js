@@ -14,6 +14,7 @@ import MusicIcon from './icons/music.png';
 import NewsIcon from './icons/news.png';
 import MessageIcon from './icons/message.png';
 import SettingIcon from './icons/settings.png';
+import PlayIcon from './icons/playIcon.png';
 
 let id = 0;
 
@@ -43,6 +44,7 @@ let state = {
       { title: "It`s mt life", singer: "Bon Jovi", photo: MyAvatar},
       { title: "New Divide", singer: "Linkin Park", photo: MyAvatar},
     ],
+    icon : PlayIcon,
   },
   users: {
     registredUsers:[

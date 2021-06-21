@@ -12,6 +12,7 @@ import Music from "../Music/Music";
 import { Route } from "react-router-dom";
 
 const MainPage = (props) => {
+  console.log(props);
   return (
     <div className={mainPageStyles.wrapper}>
       <Header state={props.state} />

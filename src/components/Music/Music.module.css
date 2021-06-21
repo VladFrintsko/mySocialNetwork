@@ -13,3 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.wrapper *{
+    text-decoration: none;
+    color:#333;
+}

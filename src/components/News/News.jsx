@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import stylesNews from './News.module.css';
+import stylesNews from "./News.module.css";
 
 const News = (props) => {
   const [data, setData] = useState(null);
@@ -32,12 +32,17 @@ const News = (props) => {
         {data.value.map((e) => {
           return (
             <div className="card" className={stylesNews.cardWrapper}>
-              <div className={stylesNews.imgWrapper}><img src={e.image.url} className={stylesNews.size} className="card-img-top size" alt={e.name} title={e.name} /></div>
+              <div className={stylesNews.imgWrapper}>
+                <img
+                  src={e.image.url}
+                  className={stylesNews.size}
+                  className="card-img-top size"
+                  alt={e.name}
+                  title={e.name}
+                />
+              </div>
               <div className="card-body">
-                <h5 className="card-title">{e.query.text}</h5>
-                <p className="card-text">
-                  
-                </p>
+                <h6 className="card-title">{e.query.text}</h6>
                 <a href={e.webSearchUrl} className="btn btn-primary">
                   To news
                 </a>
