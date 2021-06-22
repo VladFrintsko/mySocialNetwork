@@ -43,9 +43,11 @@ const News = (props) => {
               </div>
               <div className="card-body">
                 <h6 className="card-title">{e.query.text}</h6>
-                <a href={e.webSearchUrl} className="btn btn-primary">
-                  To news
-                </a>
+                <div className={stylesNews.button}>
+                  <a href={e.webSearchUrl} className="btn btn-primary">
+                    To news
+                  </a>
+                </div>
               </div>
             </div>
           );

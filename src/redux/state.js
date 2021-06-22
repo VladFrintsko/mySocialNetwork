@@ -128,7 +128,6 @@ export let removePost = (id) => {
   );
 };
 
-// setInterval(() => state.dialogs.answerMessages.push('hi'), 10000);
 
 export let addPost = (text) => {
   state.profilePage.MyPosts.push({
