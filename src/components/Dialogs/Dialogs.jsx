@@ -5,7 +5,6 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
   let dialogId = 0;
-
   let textElem = React.createRef();
 
   let addMessage = () => {
@@ -33,6 +32,9 @@ const Dialogs = (props) => {
       </div>
       <div className={dialogStyles.messages_wrapper}>
         <div className={dialogStyles.messages}>
+        
+            <div className={dialogStyles.answer}>{props.dialogs.answerMessage}</div>
+        
           {props.dialogs.messages.map((message) => {
             return <Message message={message} />;
           })}

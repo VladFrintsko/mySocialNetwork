@@ -35,3 +35,18 @@
   position: absolute;
   bottom: 0;
 }
+.answer {
+  background: #333;
+  word-wrap:break-word;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  border-radius: 10px 10px 0 10px;
+  margin-left: 10px;
+  transition: .4s;
+  color:white;
+}
+.answer:hover{
+  cursor: pointer;
+  background: #111;
+}

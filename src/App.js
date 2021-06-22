@@ -95,7 +95,7 @@ const App = (props) => {
     return (
       <div className="reg-wrapper">
         <div className="signIn-wrapper">
-          <h1>Вход</h1>
+          <div className='userIcon'><img src={props.state.icons.userIcon} /></div>
           <div className="enter-field">
             <div className="login-field">
               {loginDirty && loginError && (

@@ -2,7 +2,6 @@
     display: none;
 }
 .enter-field{
-    border: 1px solid black;
     max-width: 300px;
     margin: 0 auto;
 }
@@ -43,8 +42,17 @@
 .signIn-wrapper{
     background: #444;
     padding: 20px 40px;
+    border-radius: 10px;
 }
-h1{
+.signIn-wrapper h1{
     text-align: center;
     color: #eee;
+}
+.userIcon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.userIcon img{
+    width: 35%;
 }

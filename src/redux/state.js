@@ -15,12 +15,16 @@ import NewsIcon from './icons/news.png';
 import MessageIcon from './icons/message.png';
 import SettingIcon from './icons/settings.png';
 import PlayIcon from './icons/playIcon.png';
+import userIcon from './icons/userIcon.png';
 
 let id = 0;
 
 let state = {
   profilePage: {
     MyPosts: [],
+  },
+  icons:{
+    userIcon,
   },
   navigation:{
     icons:{
@@ -109,7 +113,7 @@ let state = {
   },
   dialogs: {
     messages: [],
-    answerMessages:[],
+    answerMessage: 'Hi!',
   },
 };
 
