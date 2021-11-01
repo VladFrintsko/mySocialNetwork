@@ -17,6 +17,8 @@ import SettingIcon from './icons/settings.png';
 import PlayIcon from './icons/playIcon.png';
 import userIcon from './icons/userIcon.png';
 
+import {rerenderTree} from "../index";
+
 let id = 0;
 
 let state = {
@@ -120,12 +122,14 @@ let state = {
 export let addLike = (like, id) => {
   let post = state.profilePage.MyPosts.find((post) => post.id == id);
   post.likes.push(like);
+  rerenderTree();
 };
 
 export let removePost = (id) => {
   state.profilePage.MyPosts = state.profilePage.MyPosts.filter(
     (post) => post.id !== id
   );
+  rerenderTree();
 };
 
 
@@ -135,10 +139,12 @@ export let addPost = (text) => {
     postText: text,
     id: id++,
   });
+  rerenderTree();
 };
 
 export let addMessage = (text) => {
   state.dialogs.messages.push(text);
+  rerenderTree();
 };
 
 export default state;

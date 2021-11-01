@@ -7,11 +7,11 @@ import state from "./redux/state";
 import { BrowserRouter } from "react-router-dom";
 import { removePost, addLike, addPost, addMessage } from "./redux/state";
 
-let rerenderTree = () =>{
+export let rerenderTree = () =>{
   ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
-        <App state={state} removePost={removePost} addLike={addLike} addPost={addPost} addMessage={addMessage} rerender={rerenderTree} />
+        <App state={state} removePost={removePost} addLike={addLike} addPost={addPost} addMessage={addMessage} />
       </BrowserRouter>
     </React.StrictMode>,
     document.getElementById("root")

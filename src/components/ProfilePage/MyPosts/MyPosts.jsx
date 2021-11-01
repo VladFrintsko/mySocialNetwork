@@ -9,7 +9,6 @@ const MyPosts = (props) => {
     let text = postText.current.value;
     if (text && text.trim() !== "") {
       props.addPost(text);
-      props.rerender();
     }
     postText.current.value = "";
   };

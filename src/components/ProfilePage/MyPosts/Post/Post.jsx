@@ -3,11 +3,9 @@ import postStyles from "./Post.module.css";
 const Post = (props) => {
   let removePost = () => {
     props.removePost(props.postInfo.id);
-    props.rerender();
   };
   let addLike = () => {
     props.addLike(1, props.postInfo.id);
-    props.rerender();
   };
 
   const trueUser = JSON.parse(localStorage.getItem('userData')).login;

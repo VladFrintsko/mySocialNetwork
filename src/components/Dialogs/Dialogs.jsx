@@ -12,7 +12,6 @@ const Dialogs = (props) => {
 
     if (text.trim() !== '') {
       props.addMessage(text);
-      props.rerender();
     } 
     textElem.current.value = "";
   };
