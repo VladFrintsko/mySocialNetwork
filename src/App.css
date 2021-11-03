@@ -1,58 +1,62 @@
 .hide {
-    display: none;
+  display: none;
 }
-.enter-field{
-    max-width: 300px;
-    margin: 0 auto;
+.enter-field {
+  max-width: 300px;
+  margin: 0 auto;
 }
-.login-field{
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+.login-field {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
-.login-field input{
-    width: 100%;
+.login-field input {
+  width: 100%;
 }
-.password-field{
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+.password-field {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
-.password-field input{
-    width: 100%;
+.password-field input {
+  width: 100%;
 }
-.button-field{
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+.button-field {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
-.reg-wrapper{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./images/regFon.jpg);
-    background-size: cover;
+.button_logIn {
+  margin-bottom: 10px;
 }
-.signIn-wrapper{
-    background: #444;
-    padding: 20px 40px;
-    border-radius: 10px;
+.reg-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/regFon.jpg);
+  background-size: cover;
 }
-.signIn-wrapper h1{
-    text-align: center;
-    color: #eee;
+.signIn-wrapper {
+  background: #444;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
 }
-.userIcon{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.signIn-wrapper h1 {
+  text-align: center;
+  color: #eee;
 }
-.userIcon img{
-    width: 35%;
+.userIcon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.userIcon img {
+  width: 35%;
 }

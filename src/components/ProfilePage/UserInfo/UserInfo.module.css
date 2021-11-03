@@ -5,8 +5,8 @@
   margin-bottom: 20px;
   border-radius: 5px 5px 0 0;
 }
-.mainInfo{
-  display:flex;
+.mainInfo {
+  display: flex;
   justify-content: center;
   padding: 10% 10% 4% 10%;
   filter: initial;
@@ -16,7 +16,7 @@
 .userPhoto {
   max-width: 200px;
 }
-.fon{
+.fon {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,6 +26,7 @@
   z-index: 0;
   filter: blur(15px);
   opacity: 0.6;
+  background-position: center;
 }
 .userPhoto img {
   width: 100%;
@@ -36,21 +37,21 @@
   padding-left: 20px;
   font-size: 18px;
 }
-.userInfo{
+.userInfo {
   margin-bottom: 5px;
 }
-.userInfo a{
+.userInfo a {
   text-decoration: none;
   margin-left: 20px;
   padding: 3px 5px;
   border-radius: 3px;
-  color:#eee;
+  color: #eee;
   font-size: 16px;
   font-weight: 700;
   text-shadow: 0 0 10px black;
   transition: 0.4s;
 }
-.userInfo a:hover{
+.userInfo a:hover {
   text-shadow: 0 0 10px white;
   color: black;
 }
@@ -59,31 +60,31 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
-.aboutInfo{
+.aboutInfo {
   z-index: 1;
   color: white;
   display: flex;
   justify-content: center;
   padding-bottom: 25px;
 }
-.aboutInfo:last-child{
+.aboutInfo:last-child {
   z-index: 1;
 }
-.generalInfo{
+.generalInfo {
   z-index: 1;
   padding: 1px 20px;
   font-size: 20px;
 }
-.generalInfo div{
+.generalInfo div {
   text-align: center;
 }
-.generalInfo:first-child{
+.generalInfo:first-child {
   border-right: 1px solid white;
 }
-.generalInfo:last-child{
+.generalInfo:last-child {
   border-left: 1px solid white;
 }
-.mySite a{
+.mySite a {
   text-decoration: none;
   color: #000;
 }

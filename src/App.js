@@ -2,6 +2,7 @@ import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
 import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
+import RegistrationModal from "./components/RegistrationModal/RegistrationModal";
 
 const App = (props) => {
   const [login, setLogin] = useState();
@@ -75,6 +76,12 @@ const App = (props) => {
     });
   };
 
+  const [showRegistrationModal, setRegistrationModal] = useState(false);
+
+  const closeRegistrationModal = () => {
+    setRegistrationModal(false);
+  }
+
   if (flag) {
     return (
       <div>
@@ -95,7 +102,9 @@ const App = (props) => {
     return (
       <div className="reg-wrapper">
         <div className="signIn-wrapper">
-          <div className='userIcon'><img src={props.state.icons.userIcon} /></div>
+          <div className="userIcon">
+            <img src={props.state.icons.userIcon} />
+          </div>
           <div className="enter-field">
             <div className="login-field">
               {loginDirty && loginError && (
@@ -124,12 +133,20 @@ const App = (props) => {
               />
             </div>
             <div className="button-field">
-              <button className="button" disabled={!formValid} onClick={enter}>
+              <button
+                className="button_logIn"
+                disabled={!formValid}
+                onClick={enter}
+              >
                 Войти
               </button>
             </div>
+            <div className="button-field">
+              <button className="button_registration" onClick={()=>{setRegistrationModal(true)}}>Регистрация</button>
+            </div>
           </div>
         </div>
+        <RegistrationModal isOpen={showRegistrationModal} close={closeRegistrationModal} />
       </div>
     );
   }
