@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import RegistrationModal from "./components/RegistrationModal/RegistrationModal";
 
 const App = (props) => {
+  const { state, removePost, addLike, addPost, addMessage, rerender } = props;
   const [login, setLogin] = useState();
   const [password, setPassword] = useState();
   const [loginDirty, setLoginDirty] = useState();
@@ -80,19 +81,19 @@ const App = (props) => {
 
   const closeRegistrationModal = () => {
     setRegistrationModal(false);
-  }
+  };
 
   if (flag) {
     return (
       <div>
         <BrowserRouter>
           <MainPage
-            state={props.state}
-            removePost={props.removePost}
-            addLike={props.addLike}
-            addPost={props.addPost}
-            addMessage={props.addMessage}
-            rerender={props.rerender}
+            state={state}
+            removePost={removePost}
+            addLike={addLike}
+            addPost={addPost}
+            addMessage={addMessage}
+            rerender={rerender}
             flag={setFlag}
           />
         </BrowserRouter>
@@ -103,7 +104,7 @@ const App = (props) => {
       <div className="reg-wrapper">
         <div className="signIn-wrapper">
           <div className="userIcon">
-            <img src={props.state.icons.userIcon} />
+            <img src={props.state.icons.userIcon} alt="user-icon" />
           </div>
           <div className="enter-field">
             <div className="login-field">
@@ -142,11 +143,21 @@ const App = (props) => {
               </button>
             </div>
             <div className="button-field">
-              <button className="button_registration" onClick={()=>{setRegistrationModal(true)}}>Регистрация</button>
+              <button
+                className="button_registration"
+                onClick={() => {
+                  setRegistrationModal(true);
+                }}
+              >
+                Регистрация
+              </button>
             </div>
           </div>
         </div>
-        <RegistrationModal isOpen={showRegistrationModal} close={closeRegistrationModal} />
+        <RegistrationModal
+          isOpen={showRegistrationModal}
+          close={closeRegistrationModal}
+        />
       </div>
     );
   }

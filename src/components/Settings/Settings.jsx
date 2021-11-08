@@ -3,9 +3,9 @@ import "../../libraries/bootstrap.min.css";
 import settingStyles from "./Settings.module.css";
 import { NavLink } from "react-router-dom";
 
-const Settings = (props) => {
+const Settings = ({flag}) => {
   const logOut = () => {
-    props.flag(false);
+    flag(false);
     localStorage.removeItem('userData');
   }
   return (

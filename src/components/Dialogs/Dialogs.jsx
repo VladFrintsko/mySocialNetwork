@@ -4,23 +4,24 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
+  const { rerender, users, dialogs } = props;
   let dialogId = 0;
   let textElem = React.createRef();
 
   let addMessage = () => {
     let text = textElem.current.value;
 
-    if (text.trim() !== '') {
+    if (text.trim() !== "") {
       props.addMessage(text);
-      props.rerender();
-    } 
+      rerender();
+    }
     textElem.current.value = "";
   };
 
   return (
     <div className={dialogStyles.dialogs}>
       <div className={dialogStyles.dialogItems}>
-        {props.users.friends.map((friend) => {
+        {users.friends.map((friend) => {
           return (
             <DialogItem
               name={friend.friendName}
@@ -32,10 +33,9 @@ const Dialogs = (props) => {
       </div>
       <div className={dialogStyles.messages_wrapper}>
         <div className={dialogStyles.messages}>
-        
-            <div className={dialogStyles.answer}>{props.dialogs.answerMessage}</div>
-        
-          {props.dialogs.messages.map((message) => {
+          <div className={dialogStyles.answer}>{dialogs.answerMessage}</div>
+
+          {dialogs.messages.map((message) => {
             return <Message message={message} />;
           })}
           <div className={dialogStyles.formSend}>

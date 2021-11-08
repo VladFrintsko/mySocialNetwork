@@ -3,7 +3,7 @@ import navStyles from "./Navbar.module.css";
 import Friends from "./Friends/Friends";
 import { NavLink } from "react-router-dom";
 
-const Navbar = (props) => {
+const Navbar = ({icons, friends}) => {
   return (
     <aside className={navStyles.aside}>
       <nav className={navStyles.navAside}>
@@ -21,7 +21,7 @@ const Navbar = (props) => {
               <div style={{ width: "20px" }}>
                 <img className={navStyles.icon}
                   style={{ width: "100%" }}
-                  src={props.icons.icons.profile}
+                  src={icons.icons.profile}
                 />
               </div>
               <div style={{ marginLeft: "10px" }}>Profile</div>
@@ -38,7 +38,7 @@ const Navbar = (props) => {
               <div style={{ width: "20px" }}>
                 <img className={navStyles.icon}
                   style={{ width: "100%" }}
-                  src={props.icons.icons.message}
+                  src={icons.icons.message}
                 />
               </div>
               <div style={{ marginLeft: "10px" }}>Messages</div>
@@ -53,7 +53,7 @@ const Navbar = (props) => {
           <div className={navStyles.navItem}>
             <div style={{ display: "flex" }}>
               <div style={{ width: "20px" }}>
-                <img  className={navStyles.icon} style={{ width: "100%" }} src={props.icons.icons.news} />
+                <img  className={navStyles.icon} style={{ width: "100%" }} src={icons.icons.news} />
               </div>
               <div style={{ marginLeft: "10px" }}>News</div>
             </div>
@@ -67,7 +67,7 @@ const Navbar = (props) => {
           <div className={navStyles.navItem}>
             <div style={{ display: "flex" }}>
               <div style={{ width: "20px" }}>
-                <img className={navStyles.icon} style={{ width: "100%" }} src={props.icons.icons.music} />
+                <img className={navStyles.icon} style={{ width: "100%" }} src={icons.icons.music} />
               </div>
               <div style={{ marginLeft: "10px" }}>Music</div>
             </div>
@@ -83,7 +83,7 @@ const Navbar = (props) => {
               <div style={{ width: "20px" }}>
                 <img className={navStyles.icon}
                   style={{ width: "100%" }}
-                  src={props.icons.icons.setting}
+                  src={icons.icons.setting}
                 />
               </div>
               <div style={{ marginLeft: "10px" }}>Settings</div>
@@ -93,7 +93,7 @@ const Navbar = (props) => {
       </nav>
       <div className={navStyles.friends}>FRIENDS</div>
       <div className={navStyles.friends_wrapper}>
-        {props.friends.map((friend) => {
+        {friends.map((friend) => {
           return <Friends avatar={friend.avatar} name={friend.friendName} />;
         })}
       </div>

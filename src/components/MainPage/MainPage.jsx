@@ -12,20 +12,22 @@ import Music from "../Music/Music";
 import { Route } from "react-router-dom";
 
 const MainPage = (props) => {
+  const { state, addMessage, rerender, addLike, removePost, addPost, flag } =
+    props;
   return (
     <div className={mainPageStyles.wrapper}>
-      <Header state={props.state} />
-      <Navbar friends={props.state.users.friends} icons={props.state.navigation} />
+      <Header state={state} />
+      <Navbar friends={state.users.friends} icons={state.navigation} />
 
       <div className={mainPageStyles.wrapperContent}>
         <Route
           path="/dialogs"
           render={() => (
             <Dialogs
-              users={props.state.users}
-              dialogs={props.state.dialogs}
-              addMessage={props.addMessage}
-              rerender={props.rerender}
+              users={state.users}
+              dialogs={state.dialogs}
+              addMessage={addMessage}
+              rerender={rerender}
             />
           )}
         />
@@ -33,20 +35,20 @@ const MainPage = (props) => {
           path="/profile"
           render={() => (
             <ProfilePage
-              rerender={props.rerender}
-              addLike={props.addLike}
-              removePost={props.removePost}
-              addPost={props.addPost}
-              state={props.state}
+              rerender={rerender}
+              addLike={addLike}
+              removePost={removePost}
+              addPost={addPost}
+              state={state}
             />
           )}
         />
         <Route path="/news" component={News} />
+        <Route path="/music" render={() => <Music music={state.music} />} />
         <Route
-          path="/music"
-          render={() => <Music music={props.state.music} />}
+          path="/settings"
+          render={() => <Settings flag={flag} rerender={rerender} />}
         />
-        <Route path="/settings" render={() => <Settings flag={props.flag} rerender={props.rerender} />} />
       </div>
     </div>
   );

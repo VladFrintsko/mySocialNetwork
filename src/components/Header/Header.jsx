@@ -4,8 +4,8 @@ import logoTree from '../../images/trans.png';
 
 import {Link} from 'react-router-dom';
 
-const Header = (props) =>{
-  const regUsers = props.state.users.registredUsers;
+const Header = ({state}) =>{
+  const regUsers = state.users.registredUsers;
   const trueUser = JSON.parse(localStorage.getItem("userData")).login;
   const getUser = regUsers.find((user) => user.login === trueUser);
     return(

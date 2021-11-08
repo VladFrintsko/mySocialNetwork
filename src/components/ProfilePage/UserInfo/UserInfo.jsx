@@ -1,19 +1,19 @@
 import React from "react";
 import userStyles from "./UserInfo.module.css";
 
-const UserInfo = (props) => {
-  const friendsSize = props.myInfo.users.friends.length;
-  const postsSize = props.myInfo.profilePage.MyPosts.length;
+const UserInfo = ({myInfo}) => {
+  const friendsSize = myInfo.users.friends.length;
+  const postsSize = myInfo.profilePage.MyPosts.length;
 
   const likeSize = (countLikes) => {
-    const posts = props.myInfo.profilePage.MyPosts;
+    const posts = myInfo.profilePage.MyPosts;
     for (let i = 0; i < posts.length; ++i) {
       countLikes += posts[i].likes.length;
     }
     return countLikes;
   };
 
-  const regUsers = props.myInfo.users.registredUsers;
+  const regUsers = myInfo.users.registredUsers;
   const trueUser = JSON.parse(localStorage.getItem("userData")).login;
   const getUser = regUsers.find((user) => user.login === trueUser);
   return (

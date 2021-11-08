@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import musicStyles from "./Music.module.css";
 import SongItem from "./Songs/SongItem";
 
-const Music = (props) => {
+const Music = ({music}) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Music = (props) => {
               title={song.title}
               singer={song.subtitle}
               photo={song.images.background}
-              icon={props.music.icon}
+              icon={music.icon}
             />
             </a>
           );

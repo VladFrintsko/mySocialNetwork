@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import stylesNews from "./News.module.css";
 
-const News = (props) => {
+const News = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     fetch(
