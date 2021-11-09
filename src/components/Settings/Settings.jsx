@@ -10,7 +10,7 @@ const Settings = ({flag}) => {
   }
   return (
     <div>
-      <h1>Settings</h1>
+      <h1 className={settingStyles.h1}>Settings</h1>
       <div className={settingStyles.registration}>
         <NavLink to='/news'>
         <button type="button" className="btn btn-outline-dark" onClick={logOut}>

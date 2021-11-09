@@ -18,6 +18,9 @@ textarea[name='addNewPost']{
     width: 50%;
     margin: 0 auto;
   }
+  .sendPost_wrapper > * {
+    color: black;
+  }
   .btn{
     padding: 0 2px;
     margin-left: 10px;
